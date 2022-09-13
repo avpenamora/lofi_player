@@ -57,7 +57,7 @@ function loadTrack(track_index){
 
   updateTimer = setInterval(seekUpdate, 1000);
 
-  curr_track.addEventListener("ended", go_next);
+  curr_track.addEventListener("ended", playTrack);
 }
 
 function go_play(){
@@ -95,8 +95,8 @@ function go_prev(){
   playTrack();
 }
 
-function seek(){
-  let seek = curr_track.duration * (seek_slider.value / 100);
+function seekTo(){
+  let seekto = curr_track.duration * (seek_slider.value / 100);
   curr_track.currentTime = seekto;
 }
 
