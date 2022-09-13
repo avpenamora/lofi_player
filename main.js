@@ -128,9 +128,11 @@ function seekUpdate(){
 }
 
 function go_track(number){
-  track_index = number;
-  loadTrack(track_index);
-  playTrack()
+  if(track_index != number){
+    track_index = number;
+    loadTrack(track_index);
+    playTrack();
+  }
 }
 
 loadTrack(track_index);
