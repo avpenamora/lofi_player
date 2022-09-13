@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <title>Lofi Player by Aidee</title>
+
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="content-type" content="text/html;charset=utf-8" />
+  <meta charset="UTF-8">
+
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.13.0/css/all.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css"/>
+</head>
+
+<body>
+  <section>
+  <div class="containerall">
+    <div class="music-player">
+      <div class="details">
+        <div class="title">Track Name</div>
+        <div class="album-art"></div>
+      </div>
+
+      <div class="controller">
+        <div class="prev-track" onclick="go_prev()">
+          <i class="fa fa-step-backward fa-1.5x"></i>
+        </div>
+        <div class="play-track" onclick="go_play()">
+          <i class="fa fa-play-circle fa-2x"></i>
+        </div>
+        <div class="next-track" onclick="go_next()">
+          <i class="fa fa-step-forward fa-1.5x"></i>
+        </div>
+      </div>
+
+      <div class="slider">
+        <div class="current-time">00:00</div>
+          <input type="range" min="1" max="100" value="0" class="seek_slider" onchange="seekTo()">
+        <div class="total-dur">00:00</div>
+      </div>
+
+      <div class="slider">
+        <i class="fa fa-volume-down"></i>
+        <input type="range" min="1" max="100" value="80" class="volume_slider" onchange="setVol()">
+        <i class="fa fa-volume-up"></i>
+      </div>
+    </div>
+
+    <div class="music-list">
+      <ul>
+        <li><button onclick="go_track(1)" class="item1">⊂((・▽・))⊃ A Trip</button></li>
+        <li><button onclick="go_track(2)" class="item2">Ｏ(≧∇≦)Ｏ Racing</button></li>
+        <li><button onclick="go_track(3)" class="item3">ヽ(*⌒∇⌒*)ﾉ Spin</button></li>
+        <li><button onclick="go_track(4)" class="item4">(⌒▽⌒)☆ Wishing Well</button></li>
+      </ul>
+    </div>
+  </div>
+  </section>
+
+  <script type="text/javascript" src="main.js"></script>
+</body>
+</html>
